@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="16dp">
+        <TextView android:id="@+id/directoryHint" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="@string/directory_hint"
+            android:textColor="@color/charcoal_600" android:textSize="13sp" android:paddingBottom="8dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/countryLayout" style="@style/Widget.Gps.Input"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" android:hint="@string/country"
+            app:endIconMode="custom" app:endIconDrawable="@drawable/ic_expand_more"
+            app:endIconContentDescription="@string/country">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/countryInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:padding="10dp" android:inputType="none"
+                android:focusable="false" android:clickable="true" android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/stateLayout" style="@style/Widget.Gps.Input"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" android:hint="@string/directory_state"
+            app:endIconMode="custom" app:endIconDrawable="@drawable/ic_expand_more"
+            app:endIconContentDescription="@string/directory_state">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/stateInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:padding="10dp" android:inputType="none"
+                android:focusable="false" android:clickable="true" android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/districtLayout" style="@style/Widget.Gps.Input"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" android:hint="@string/directory_district"
+            app:endIconMode="custom" app:endIconDrawable="@drawable/ic_expand_more"
+            app:endIconContentDescription="@string/directory_district">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/districtInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:padding="10dp" android:inputType="none"
+                android:focusable="false" android:clickable="true" android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cityLayout" style="@style/Widget.Gps.Input"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" android:hint="@string/directory_city"
+            app:endIconMode="custom" app:endIconDrawable="@drawable/ic_expand_more"
+            app:endIconContentDescription="@string/directory_city">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/cityInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:padding="10dp" android:inputType="none"
+                android:focusable="false" android:clickable="true" android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ProgressBar android:id="@+id/progress" android:layout_width="32dp"
+            android:layout_height="32dp" android:layout_gravity="center_horizontal" android:visibility="gone" />
+        <TextView android:id="@+id/coverageText" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/charcoal_600"
+            android:textSize="12sp" android:paddingBottom="8dp" android:accessibilityLiveRegion="polite" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/searchButton"
+            style="@style/Widget.Gps.Button" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="48dp"
+            android:text="@string/directory_locate" app:icon="@drawable/ic_my_location" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/directory_attribution" android:textColor="@color/charcoal_600"
+            android:textSize="11sp" android:gravity="center" android:paddingBottom="8dp" />
+    </LinearLayout>
+</ScrollView>
